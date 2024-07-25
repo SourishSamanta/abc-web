@@ -1,0 +1,30 @@
+.logo{
+    width: 18vw;
+    /* min-width: 250px; */
+    top: 18%;
+    left: 41.5%;
+    
+    animation: anime 10s infinite linear; 
+    transform-style: preserve-3d;
+}
+
+.glowBlue{
+    box-shadow: 0 0 20px #3A8CA6, 0 0 40px #3A8CA6, 0 0 60px #3A8CA6, 0 0 80px #3A8CA6;
+    filter: blur(185px);
+    
+    
+}
+
+.glowGreen{
+    box-shadow: 0 0 20px #0ED984, 0 0 40px #0ED984, 0 0 60px #0ED984, 0 0 80px #0ED984;
+    filter: blur(185px)
+}
+
+@keyframes anime {
+    0%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}

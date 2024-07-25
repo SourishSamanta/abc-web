@@ -3,7 +3,7 @@ import treeImg from '../assets/image5.png'
 
 const Info = () => {
   return (
-    <section className=' w-full h-[100vh] flex items-center justify-center'>
+    <section className=' z-10 w-full h-[100vh] flex items-center justify-center'>
 
       <div className='flex w-10/12 justify-around'>
         <div className=' h-[35vw] w-[35vw] object-cover'>
