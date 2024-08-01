@@ -8,28 +8,43 @@ const Work = () => {
         <hr className=' border-8 border-white/50 h-[145vh] rounded-full' />
 
         <div className=' absolute top-[5%] left-[0%] flex items-center'>
-          <div className=' h-36 w-72 bg-white/20 rounded-2xl mx-3'></div>
-          <hr  className=' w-[10vw] border-dotted border-4 border-white/50 rounded-sm'/>
+          <div className=' h-36 w-72 bg-white/20 border-2 border-[#0ed984f1] rounded-2xl mx-3 flex flex-col items-center justify-center'>
+            <h1 className=' text-3xl text-[#0ed984f1] font-bold mb-2'>Join</h1>
+            <p className=' font-light w-[90%]'>Users sign up to become members of the community.</p>
+          </div>
+          <hr  className=' w-[10vw] opacity-40 border-dotted border-[3px] border-white/50 rounded-sm'/>
         </div>
 
         <div className=' absolute top-[25%] right-[0%] flex flex-row-reverse items-center'>
-          <div className=' h-36 w-72 bg-white/20 rounded-2xl mx-3'></div>
-          <hr className=' w-[10vw] border-dotted border-4 border-white/50 rounded-sm'/>
+          <div className=' h-36 w-72 bg-white/20 border-2 border-[#0ed984f1] rounded-2xl mx-3 flex flex-col items-center justify-center'>
+            <h1 className=' text-3xl text-[#0ed984f1] font-bold mb-2'>Engage</h1>
+            <p className=' font-light w-[90%]'>Participate in discussions, seek help, and connect with others.</p>
+          </div>
+          <hr className=' w-[10vw] opacity-40 border-dotted border-[3px] border-white/50 rounded-sm'/>
         </div>
 
         <div className=' absolute top-[45%] left-[0%] flex items-center'>
-          <div className=' h-36 w-72 bg-white/20 rounded-2xl mx-3'></div>
-          <hr className=' w-[10vw] border-dotted border-4 border-white/50 rounded-sm'/>
+          <div className=' h-36 w-72 bg-white/20 border-2 border-[#0ed984f1] rounded-2xl mx-3 flex flex-col items-center justify-center'>
+            <h1 className=' text-3xl text-[#0ed984f1] font-bold mb-2'>Learn</h1>
+            <p className=' font-light w-[90%]'>Enroll in courses and access resources for skill development.</p>
+          </div>
+          <hr className=' w-[10vw] opacity-40 border-dotted border-[3px] border-white/50 rounded-sm'/>
         </div>
 
         <div className=' absolute top-[65%] right-[0%] flex flex-row-reverse items-center'>
-          <div className=' h-36 w-72 bg-white/20 rounded-2xl mx-3'></div>
-          <hr className=' w-[10vw] border-dotted border-4 border-white/50 rounded-sm'/>
+          <div className=' h-36 w-72 bg-white/20 border-2 border-[#0ed984f1] rounded-2xl mx-3 flex flex-col items-center justify-center'>
+            <h1 className=' text-3xl text-[#0ed984f1] font-bold mb-2'>Collaborate</h1>
+            <p className=' font-light w-[90%]'>Form teams for hackathons and competitions.</p>
+          </div>
+          <hr className=' w-[10vw] opacity-40 border-dotted border-[3px] border-white/50 rounded-sm'/>
         </div>
 
         <div className=' absolute top-[85%] left-[0%] flex items-center'>
-          <div className=' h-36 w-72 bg-white/20 rounded-2xl mx-3'></div>
-          <hr className=' w-[10vw] border-dotted border-4 border-white/50 rounded-sm'/>
+          <div className=' h-36 w-72 bg-white/20 border-2 border-[#0ed984f1] rounded-2xl mx-3 flex flex-col items-center justify-center'>
+            <h1 className=' text-3xl text-[#0ed984f1] font-bold mb-2 ml-5'>Compete and Grow</h1>
+            <p className=' font-light w-[90%]'>Take part in events, showcase skills, and receive feedback.</p>
+          </div>
+          <hr className=' w-[10vw] opacity-40 border-dotted border-[3px] border-white/50 rounded-sm'/>
         </div>
         
       </div>

@@ -1,16 +1,42 @@
-import React from 'react'
+import React from "react";
+
+import "../App.css";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+// import required modules
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 
 const Gallery = () => {
-  return (
-    <section className=' w-full h-[100vh] flex justify-center items-center'>
-      <div className='relative w-10/12 h-5/6 bg-white/20 flex justify-between'>
-        <div className=' absolute left-0 h-full w-1/12 bg-black/40'></div>
-        <div className=' h-full flex-1 bg-white/20 '></div>
-        <div className=' absolute right-0 h-full w-1/12 bg-black/40'></div>
+    return (
+        <section className=" z-10 w-full h-[100vh] flex justify-center items-center px-32">
+            <Swiper
+                cssMode={true}
+                navigation={true}
+                pagination={true}
+                mousewheel={true}
+                keyboard={true}
+                modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                className="mySwiper h-[80%]"
+            >
+                {[1,2,3,4,5,6].map((el, i) => (
+                    <SwiperSlide>
+                        <div className="flex w-full h-full items-center justify-center bg-white/20">
+                            <h1>Slide {el}</h1>
+                        </div>
+                    </SwiperSlide>
+                ))}
 
-      </div>
-    </section>
-  )
-}
+              
+            </Swiper>
+        </section>
+    );
+};
 
-export default Gallery
+export default Gallery;

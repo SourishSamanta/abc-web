@@ -8,6 +8,7 @@
     transform-style: preserve-3d;
 }
 
+
 .glowBlue{
     box-shadow: 0 0 20px #3A8CA6, 0 0 40px #3A8CA6, 0 0 60px #3A8CA6, 0 0 80px #3A8CA6;
     filter: blur(185px);
@@ -19,6 +20,35 @@
     box-shadow: 0 0 20px #0ED984, 0 0 40px #0ED984, 0 0 60px #0ED984, 0 0 80px #0ED984;
     filter: blur(185px)
 }
+
+.main-heading{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h1{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h3{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    
+}
+
+p{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
 
 @keyframes anime {
     0%{
