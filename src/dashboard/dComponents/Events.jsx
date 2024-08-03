@@ -3,7 +3,9 @@ import React from "react";
 const Events = () => {
     return(
         <>
-            <h1>Events</h1>
+            <div className="w-[80vw]">
+                <h1 className="text-2xl mb-4">Events</h1>
+            </div>
         </>
     )
 }

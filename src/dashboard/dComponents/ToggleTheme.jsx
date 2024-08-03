@@ -1,5 +1,5 @@
-// src/components/ToggleTheme.jsx
 import { useState, useEffect } from 'react';
+import { FaSun, FaMoon } from 'react-icons/fa'; // Importing the icons
 
 const ToggleTheme = () => {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
@@ -18,8 +18,12 @@ const ToggleTheme = () => {
   };
 
   return (
-    <button onClick={toggleTheme} className="mb-4 p-2 border rounded">
-      Toggle {theme === 'dark' ? 'Light' : 'Dark'} Mode
+    <button
+      onClick={toggleTheme}
+      className="mb-4 p-2 absolute right-5 border rounded flex items-center justify-center rounded-full"
+    >
+      {theme === 'dark' ? <FaMoon size={20} /> : <FaSun size={20} /> }
+      
     </button>
   );
 };

@@ -2,7 +2,9 @@ import React from "react";
 
 const Gallery = () => {
     <>
-        <h1>Gallery</h1>
+        <div className="w-[80vw]">
+                <h1 className="text-2xl mb-4">Gallery</h1>
+        </div>
     </>
 }
 

@@ -21,6 +21,10 @@
     filter: blur(185px)
 }
 
+.anime1{
+    animation: move1 10s infinite linear  ;
+}
+
 .main-heading{
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -56,5 +60,14 @@ p{
     }
     100%{
         transform: rotateY(360deg);
+    }
+}
+
+@keyframes move1 {
+    0%{
+        margin-left: 0;
+    }
+    100%{
+        margin-left: 40px;
     }
 }

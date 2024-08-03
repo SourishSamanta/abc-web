@@ -3,7 +3,9 @@ import React from "react";
 const Announcement = () => {
     return(
         <>
-            <h1>Announcement</h1>
+            <div className="w-[80vw]">
+                <h1 className="text-2xl mb-4">Announcements</h1>
+            </div>
         </>
     )
 }

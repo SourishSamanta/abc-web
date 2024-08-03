@@ -1,13 +1,17 @@
 import React from 'react'
-import treeImg from '../assets/image5.png'
+import img from '../assets/image8.png'
+import video2 from '../assets/video2.mp4'
 
 const Info = () => {
   return (
     <section className=' z-10 w-full h-[100vh] flex items-center justify-center'>
 
       <div className='flex w-10/12 justify-around'>
-        <div className=' h-[35vw] w-[35vw] object-cover'>
-          <img src={treeImg} alt="why Blockchain ?" className=' w-full' />
+        <div className=' h-[35vw] w-[35vw] rounded-[3rem]  overflow-hidden'>
+          <img src={img} alt="why Blockchain ?" className=' w-full' />
+          {/* <video autoPlay muted loop className=' w-full h-full object-cover '>
+            <source src={video2} />
+          </video> */}
         </div>
         <div className=' flex flex-col items-center w-[35vw] '>
           <div className='  flex flex-col items-center w-full justify-between '>
@@ -16,7 +20,7 @@ const Info = () => {
           </div>
 
           <div className=' w-full mt-6'>
-            <p className=' text-[1.3vw] text-center opacity-70'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae optio velit, in cupiditate magnam dolor similique impedit distinctio, quo, temporibus eligendi dicta inventore nemo eaque quibusdam itaque accusamus exercitationem accusantium! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus a veritatis molestias consequatur perspiciatis nulla dolorum error quibusdam dolore corporis provident facere, hic qui est, officiis, autem temporibus harum eum fugit excepturi sed nesciunt placeat? Fugiat excepturi repellendus non. Nisi.</p>
+            <p className=' text-[1.3vw]  opacity-70'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae optio velit, in cupiditate magnam dolor similique impedit distinctio, quo, temporibus eligendi dicta inventore nemo eaque quibusdam itaque accusamus exercitationem accusantium! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus a veritatis molestias consequatur perspiciatis nulla dolorum error quibusdam dolore corporis provident facere, hic qui est, officiis, autem temporibus harum eum fugit excepturi sed nesciunt placeat? Fugiat excepturi repellendus non. Nisi.</p>
           </div>
           
         </div>
