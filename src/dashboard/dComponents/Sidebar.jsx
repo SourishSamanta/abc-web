@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { FaHome, FaBullhorn, FaCalendarAlt, FaBars } from "react-icons/fa"; // Importing some icons
 import { CgProfile } from "react-icons/cg";
 import { FaPhotoFilm } from "react-icons/fa6";
+import { UserButton, useUser } from "@clerk/clerk-react";
 
 const Sidebar = ({ collapsed, setCollapsed, onClick, selected }) => {
-    
+
+    const { user } = useUser();
 
     const toggleSidebar = () => {
         setCollapsed(!collapsed);
@@ -15,16 +17,14 @@ const Sidebar = ({ collapsed, setCollapsed, onClick, selected }) => {
             "mb-2 w-full rounded-r-md flex items-center px-5 py-3 transition-all duration-200";
         const hoverClasses = "hover:bg-white hover:text-black";
         const selectedClasses = "bg-white text-black text-xl";
-        return `${baseClasses} ${hoverClasses} ${
-            selected === item ? selectedClasses : ""
-        }`;
+        return `${baseClasses} ${hoverClasses} ${selected === item ? selectedClasses : ""
+            }`;
     };
 
     return (
         <div
-            className={`flex  h-[100vh] flex-col fixed bg-gray-800 text-white ${
-                collapsed ? "w-20" : "w-64"
-            } transition-all duration-300 p-4`}
+            className={`flex  h-[100vh] flex-col fixed bg-gray-800 text-white ${collapsed ? "w-20" : "w-64"
+                } transition-all duration-300 p-4`}
         >
             <button
                 onClick={toggleSidebar}
@@ -32,10 +32,20 @@ const Sidebar = ({ collapsed, setCollapsed, onClick, selected }) => {
             >
                 <FaBars />
             </button>
+
             {!collapsed && (
                 <>
                     <div className="flex flex-col items-center justify-center w-full mt-7">
-                        <div className="h-20 w-20 rounded-full bg-white/20 mb-3 flex items-center justify-center object-cover object-center"></div>
+                        <div className="h-20 w-20 rounded-full bg-white/20 mb-3 flex items-center justify-center object-cover object-center">
+                            <UserButton appearance={{
+                                elements: {
+                                    userButtonAvatarBox: {
+                                        width: '100%',
+                                        height: '100%',
+                                    },
+                                },
+                            }} />
+                        </div>
                         <h1 className="text-2xl font-semibold">Name</h1>
                         <p className="text-base font-light">Email</p>
                     </div>
