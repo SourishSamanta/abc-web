@@ -3,23 +3,26 @@ import { FaHome, FaBullhorn, FaCalendarAlt, FaBars } from "react-icons/fa"; // I
 import { CgProfile } from "react-icons/cg";
 import { FaPhotoFilm } from "react-icons/fa6";
 
-const Sidebar = ({ onClick, selected }) => {
-    const [collapsed, setCollapsed] = useState(false);
+const Sidebar = ({ collapsed, setCollapsed, onClick, selected }) => {
+    
 
     const toggleSidebar = () => {
         setCollapsed(!collapsed);
     };
 
     const getButtonClasses = (item) => {
-        const baseClasses = "mb-2 w-full rounded-r-md flex items-center px-5 py-3 transition-all duration-200";
+        const baseClasses =
+            "mb-2 w-full rounded-r-md flex items-center px-5 py-3 transition-all duration-200";
         const hoverClasses = "hover:bg-white hover:text-black";
         const selectedClasses = "bg-white text-black text-xl";
-        return `${baseClasses} ${hoverClasses} ${selected === item ? selectedClasses : ""}`;
+        return `${baseClasses} ${hoverClasses} ${
+            selected === item ? selectedClasses : ""
+        }`;
     };
 
     return (
         <div
-            className={`flex flex-col relative bg-gray-800 text-white ${
+            className={`flex  h-[100vh] flex-col fixed bg-gray-800 text-white ${
                 collapsed ? "w-20" : "w-64"
             } transition-all duration-300 p-4`}
         >
@@ -44,33 +47,76 @@ const Sidebar = ({ onClick, selected }) => {
                     onClick={() => onClick("home")}
                     className={getButtonClasses("home")}
                 >
-                    <FaHome size={27}/>
-                    {!collapsed && <span className="ml-2  transition duration-200 font-semibold">Home</span>}
+                    <FaHome size={27} />
+                    {!collapsed && (
+                        <span className="ml-2  transition duration-200 font-semibold">
+                            Home
+                        </span>
+                    )}
                 </button>
+
+                <button
+                    onClick={() => onClick("projects")}
+                    className={getButtonClasses("projects")}
+                >
+                    <FaHome size={27} />
+                    {!collapsed && (
+                        <span className="ml-2  transition duration-200 font-semibold">
+                            Projects
+                        </span>
+                    )}
+                </button>
+
+                <button
+                    onClick={() => onClick("community")}
+                    className={getButtonClasses("community")}
+                >
+                    <FaHome size={27} />
+                    {!collapsed && (
+                        <span className="ml-2  transition duration-200 font-semibold">
+                            Community
+                        </span>
+                    )}
+                </button>
+
                 <button
                     onClick={() => onClick("announcement")}
                     className={getButtonClasses("announcement")}
                 >
-                    <FaBullhorn size={27}/>
-                    {!collapsed && <span className="ml-2  transition duration-200 
-                    font-semibold">Announcements</span>}
+                    <FaBullhorn size={27} />
+                    {!collapsed && (
+                        <span
+                            className="ml-2  transition duration-200 
+                    font-semibold"
+                        >
+                            Announcements
+                        </span>
+                    )}
                 </button>
                 <button
                     onClick={() => onClick("events")}
                     className={getButtonClasses("events")}
                 >
-                    <FaCalendarAlt size={27}/>
-                    {!collapsed && <span className="ml-2  transition duration-200  font-semibold">Events</span>}
-                </button>
-
-                <button
-                    onClick={() => onClick("gallery")}
-                    className={getButtonClasses("gallery")}
-                >
-                    <FaPhotoFilm size={27}/>
-                    {!collapsed && <span className="ml-2  transition duration-200  font-semibold">Gallery</span>}
+                    <FaCalendarAlt size={27} />
+                    {!collapsed && (
+                        <span className="ml-2  transition duration-200  font-semibold">
+                            Events
+                        </span>
+                    )}
                 </button>
             </div>
+
+            <button
+                onClick={() => onClick("events")}
+                className=" absolute left-0 bottom-7 mb-2 w-full rounded-r-md flex items-center px-5 py-3 transition-all duration-200 hover:bg-white hover:text-black"
+            >
+                <FaCalendarAlt size={27} />
+                {!collapsed && (
+                    <span className="ml-2  transition duration-200  font-semibold">
+                        Log Out
+                    </span>
+                )}
+            </button>
         </div>
     );
 };

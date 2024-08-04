@@ -12,6 +12,22 @@ body {
   color: black; /* Light mode text color */
 }
 
+.project-card{
+  background: #e0e0e0; /* Light mode background */
+  border-radius: 12px;
+  box-shadow: 10px 10px 15px #b8b9be;
+  margin: 10px;
+  color: black; /* Light mode text color */
+  width: 20vw;
+  height: 12vw;
+}
+
+.dark .project-card{
+  background: #2c2c2c; /* Dark mode background */
+  box-shadow: 10px 10px 30px #1a1a1a;
+  color: white; /* Dark mode text color */
+}
+
 .dark .neumorphism-card {
   background: #2c2c2c; /* Dark mode background */
   box-shadow: 10px 10px 30px #1a1a1a, -10px -10px 30px #363636;

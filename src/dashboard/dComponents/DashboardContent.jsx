@@ -3,6 +3,7 @@ import Announcement from './Announcements';
 import Events from './Events';
 import Gallery from './Gallery';
 import Home from './Home';
+import Projects from './projects/Projects';
 
 
 const DashboardContent = ({ component }) => {
@@ -15,6 +16,8 @@ const DashboardContent = ({ component }) => {
       return <Events />;
     case 'gallery':
       return <Gallery />;
+    case 'projects':
+      return <Projects />;
     default:
       return <Home />;
   }
