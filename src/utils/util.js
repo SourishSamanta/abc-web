@@ -1,36 +1,12 @@
 import { FaDiscord, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
+import img1 from "../assets/gallery/one.jpeg"
+import img2 from "../assets/gallery/two.png"
+import img3 from "../assets/gallery/three.png"
+import img4 from "../assets/gallery/four.jpeg"
+import img5 from "../assets/gallery/five.jpeg"
 
+export const gallery = [img1,img2,img3,img4,img5]
 
-const gallery = [
-
-]
-
-export const join = [{
-    "icon" : <FaDiscord size={100}/>,
-    "title" : "Discord"
-
-  },
-  {
-    "icon" : <FaGithub size={100}/>,
-    "title" : "Github"
-
-  },
-  {
-    "icon" : <FaInstagram  size={100}/>,
-    "title" : "Instagram"
-
-  },
-  {
-    "icon" : <FaDiscord size={100}/>,
-    "title" : "Facebook"
-
-  },
-  {
-    "icon" : <FaTwitter size={100}/>,
-    "title" : "Twitter"
-
-  },
-]
 
 
 

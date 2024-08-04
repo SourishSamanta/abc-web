@@ -11,7 +11,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // import required modules
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import { Autoplay,Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import { gallery } from "../utils/util";
 
 const Gallery = () => {
     return (
@@ -19,16 +20,20 @@ const Gallery = () => {
             <Swiper
                 cssMode={true}
                 navigation={true}
+                autoplay={{
+                    delay: 1500,
+                    disableOnInteraction: false,
+                  }}
                 pagination={true}
                 mousewheel={true}
                 keyboard={true}
-                modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                modules={[Autoplay, Navigation, Pagination, Mousewheel, Keyboard]}
                 className="mySwiper h-[80%]"
             >
-                {[1,2,3,4,5,6].map((el, i) => (
+                { gallery.map((el, i) => (
                     <SwiperSlide>
-                        <div className="flex w-full h-full items-center justify-center bg-white/20">
-                            <h1>Slide {el}</h1>
+                        <div className="flex w-full h-full items-center justify-center overflow-hidden bg-white/20">
+                            <img src={el} className=" w-full" alt="" />
                         </div>
                     </SwiperSlide>
                 ))}
