@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IoArrowBackCircle } from "react-icons/io5";
 import axios from "axios";
+import { useUser } from "@clerk/clerk-react";
 
 const AddProject = ({ activateForm, setActivateForm }) => {
     const [socialLinks, setSocialLinks] = useState([""]);
@@ -9,6 +10,7 @@ const AddProject = ({ activateForm, setActivateForm }) => {
     const [githubLink, setGithubLink] = useState("");
     const [banner, setBanner] = useState(null);
     const [bannerPreview, setBannerPreview] = useState("");
+    const {user} = useUser();
 
     const handleAddSocialLink = () => {
         if (socialLinks.length < 5) {
@@ -88,13 +90,13 @@ const AddProject = ({ activateForm, setActivateForm }) => {
         //     socialLinks,
         // };
 
-        console.log({
-            projectName,
-            description,
-            githubLink,
-            banner,
-            socialLinks,
-        })
+        // console.log({
+        //     projectName,
+        //     description,
+        //     githubLink,
+        //     banner,
+        //     socialLinks,
+        // })
 
         const BannerForm = new FormData();
         BannerForm.append('image', banner)
@@ -117,11 +119,12 @@ const AddProject = ({ activateForm, setActivateForm }) => {
             projectDescription : description,
             links : links,
             bannerURL : BannerURL,
-            clerkID : "123456"
+            clerkID : user.id
         
         })
 
-        console.log(response)
+        if(response.data.success === true)
+            setActivateForm(!activateForm)
 
         
     };
