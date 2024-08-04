@@ -11,15 +11,19 @@ import About from './components/About'
 import './App.css'
 import Main from './dashboard/Main'
 import JoinUs from './components/Join'
+import { useNavigate } from 'react-router-dom'
+
 
 
 const App = () => {
+
+  const navigate = useNavigate();
   
   const [dashboard, setDashboard] = useState(false)
 
   const handleClick = () => {
-    setDashboard(true)
-    console.log("Hello")
+    console.log('cilick')
+    navigate('/dashboard')
   }
 
   return (

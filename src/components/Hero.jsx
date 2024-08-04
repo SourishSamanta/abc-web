@@ -1,8 +1,12 @@
 import React from "react";
 import logo from "../assets/image4.png";
 import { FaAngleRight } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Hero = ({onGetStartedClick}) => {
+
+    const navigate = useNavigate();
+
     return (
         <>
         <div className=" h-[90vh] w-full flex items-end justify-center overflow-hidden z-10">
@@ -17,7 +21,9 @@ const Hero = ({onGetStartedClick}) => {
                 </p>
 
                 <button 
-                onClick={() => {onGetStartedClick}}
+                onClick={() => {
+                    navigate('/dashboard')
+                }}
                 className=" border-white border-2 bg-white/20 px-14 py-3 rounded-3xl mt-8 hover:bg-white text-[1.3vw] font-bold hover:text-black transition-all duration-200 flex items-center gap-2">
                     Get Started <FaAngleRight />
                 </button>
