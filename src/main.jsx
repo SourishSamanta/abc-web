@@ -16,7 +16,6 @@ if (!PUBLISHABLE_KEY) {
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
     <BrowserRouter>
     <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/" appearance={{
         baseTheme: [dark]
@@ -24,5 +23,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
      <RoutesController />
     </ClerkProvider>
     </BrowserRouter>
-  </React.StrictMode>,
 )
