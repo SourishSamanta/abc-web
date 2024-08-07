@@ -46,8 +46,8 @@ const Sidebar = ({ collapsed, setCollapsed, onClick, selected }) => {
                                 },
                             }} />
                         </div>
-                        <h1 className="text-2xl font-semibold">Name</h1>
-                        <p className="text-base font-light">Email</p>
+                        <h1 className="text-2xl font-semibold">{user.fullName}</h1>
+                        <p className="text-base font-light">{user.primaryEmailAddress.emailAddress}</p>
                     </div>
                 </>
             )}
