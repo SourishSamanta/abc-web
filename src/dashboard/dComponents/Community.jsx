@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useUser } from "@clerk/clerk-react";
 
 const Community = () => {
   const [posts, setPosts] = useState([]);
@@ -9,23 +10,24 @@ const Community = () => {
     content: "",
     media: ""
   });
+  const {user} = useUser();
+  const [clerkID, setClerkID] = useState(""); // Assuming clerkID is available and needs to be set
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const response = await axios.get(import.meta.env.VITE_API_URL + "/post/read-posts-all");
-        console.log(import.meta.env.VITE_API_URL + "/post/read-posts-all");
-        if (response.data.success) {
-          const postsWithComments = response.data.posts.map(post => ({
-            ...post,
-            comments: post.comments || []
-          }));
-          setPosts(postsWithComments);
-        }
-      } catch (error) {
-        console.error("Error fetching posts:", error);
+  const fetchPosts = async () => {
+    try {
+      const response = await axios.get(import.meta.env.VITE_API_URL + "/post/read-posts-all");
+      if (response.data.success) {
+        const postsWithComments = response.data.posts.map(post => ({
+          ...post,
+          comments: post.comments || []
+        }));
+        setPosts(postsWithComments);
       }
-    };
+    } catch (error) {
+      console.error("Error fetching posts:", error);
+    }
+  };
+  useEffect(() => {
 
     fetchPosts();
   }, []);
@@ -53,14 +55,41 @@ const Community = () => {
     });
   };
 
-  const handleFormSubmit = (e) => {
+  console.log(user)
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    console.log("New Post:", newPost);
-    setNewPost({
-      content: "",
-      media: ""
-    });
-    setIsFormOpen(false);
+
+    
+
+    try {
+      // Make API call to create a new post
+      console.log(user.id)
+      console.log(newPost)
+      const response = await axios.post(import.meta.env.VITE_API_URL + "/post/create-post", {
+        content: newPost.content,
+        media: newPost.media,
+        clerkID: user.id // Ensure clerkID is included in the request
+      });
+
+      if (response.data.success) {
+        alert("Post created successfully!");
+
+        // Optionally, add the new post to the list of posts without re-fetching
+        fetchPosts()        
+
+        // Reset the form
+        setNewPost({
+          content: "",
+          media: ""
+        });
+        setIsFormOpen(false);
+      } else {
+        alert(response.data.message);
+      }
+    } catch (error) {
+      console.error("Error creating post:", error);
+      alert("An error occurred while creating the post.");
+    }
   };
 
   return (
