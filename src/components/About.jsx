@@ -13,7 +13,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className=' h-[80%] w-[48%] bg-[#B8FDCE] rounded-[2rem] border-4 border-white bg-opacity-45 flex flex-col items-center '>
+          <div className=' h-[80%] w-[48%] bg-[#6fa1ffcb] rounded-[2rem] border-4 border-white  flex flex-col items-center '>
             <h1 className=' text-[2rem] font-semibold  my-14 overflow-hidden'>About Us</h1>
             <p className=' text-lg w-[85%] text-center overflow-hidden text-ellipsis'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus voluptates beatae aperiam? Et ullam laudantium impedit asperiores quaerat deserunt, eveniet voluptates, temporibus, quasi at dolor ea deleniti repellendus iste suscipit incidunt quos. Quod, saepe! Consectetur, aliquid, culpa expedita incidunt enim magni soluta excepturi reiciendis beatae tempora explicabo veritatis nemo quasi dolor libero laborum.</p>
             <button className=' bg-white rounded-md px-4 py-3 text-black m-8 font-medium flex items-center overflow-hidden'>

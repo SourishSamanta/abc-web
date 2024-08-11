@@ -21,7 +21,7 @@ const Gallery = () => {
                 cssMode={true}
                 navigation={true}
                 autoplay={{
-                    delay: 1500,
+                    delay: 5000,
                     disableOnInteraction: false,
                   }}
                 pagination={true}

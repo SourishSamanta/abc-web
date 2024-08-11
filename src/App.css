@@ -8,6 +8,11 @@
     transform-style: preserve-3d;
 }
 
+.video video{
+    mix-blend-mode: exclusion;
+    filter: contrast(100%);
+}
+
 
 .glowBlue{
     box-shadow: 0 0 20px #3A8CA6, 0 0 40px #3A8CA6, 0 0 60px #3A8CA6, 0 0 80px #3A8CA6;
