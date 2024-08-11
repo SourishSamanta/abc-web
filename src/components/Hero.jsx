@@ -11,7 +11,7 @@ const Hero = ({onGetStartedClick}) => {
     return (
         <>
         {/* <div className=" h-[90vh] w-full flex items-end justify-center overflow-hidden z-10"> */}
-        <div className="h-[100vh] w-full flex items-center overflow-hidden z-10 bg-black">
+        <div id="home" className="h-[100vh] w-full flex items-center overflow-hidden z-10 bg-black">
 
             <div className=" pl-[10vw] w-[70vw] flex flex-col mr-[5vw]">
                 <h1 className=" main-heading text-[5vw] font-bold  overflow-hidden">Algorand</h1>
@@ -22,7 +22,7 @@ const Hero = ({onGetStartedClick}) => {
                 onClick={() => {
                     navigate('/dashboard')
                 }}
-                className=" border-white border-2 bg-white/20 px-14 py-3 rounded-3xl mt-8 hover:bg-white text-[1.4vw] font-normal hover:text-black transition-all duration-200 flex items-center gap-2">
+                className="mainButton mb-10 border-white border-2 bg-blue-700 px-14 py-3 w-[16vw] rounded-3xl mt-8 hover:bg-white text-[1.4vw] font-semibold hover:text-black transition-all duration-500  flex items-center gap-2">
                     Get Started <FaAngleRight />
                 </button>
             </div>

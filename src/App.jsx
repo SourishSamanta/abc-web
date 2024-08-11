@@ -49,7 +49,7 @@ const App = () => {
       <div className=" top-[260vw] right-[-55vw] absolute w-[80vw] opacity-40 h-[50vw] bg-[#2a98ff] rounded-full glowBlue "></div>
 
 
-      <div className=" top-[320vw] right-[0vw] absolute w-[100vw] opacity-[.2] h-[50vw] bg-[#2a98ff] rounded-full glowBlue "></div>
+      <div className=" top-[320vw] right-[0vw] absolute w-[100vw] opacity-[.1] h-[50vw] bg-[#2a98ff] rounded-full glowBlue "></div>
 
       <div className=' w-screen h-auto min-h-screen bg-black -z-20 flex flex-col text-white overflow-x-hidden scroll-smooth'>
 

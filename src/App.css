@@ -57,6 +57,27 @@ p{
     font-style: normal;
 }
 
+.mainButton:hover{
+    animation: aura 1s infinite alternate;
+}
+
+.learnButton:hover{
+    animation: aura 1s infinite alternate;
+}
+
+
+@keyframes aura {
+    0%{
+        box-shadow:15px 0 25px 0 rgba(173, 216, 230, 0.70),  /* light blue shadow */
+        -15px 0 25px 0 rgb(255, 137, 155, 0.7);
+    }
+    100%{
+        box-shadow: 
+        15px 0 25px 0 rgba(255, 137, 155, 0.7),  /* light blue shadow */
+        -15px 0 25px 0 rgba(173, 216, 230, 0.7);
+    }
+    
+}
 
 
 @keyframes anime {

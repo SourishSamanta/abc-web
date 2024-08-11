@@ -27,7 +27,7 @@ const JoinUs = () => {
   
 ]
   return (
-    <div className=' w-full h-[100vh] flex flex-col items-center justify-center'>
+    <div id='contact' className=' w-full h-[100vh] flex flex-col items-center justify-center'>
       <h1 className=' text-3xl font-semibold opacity-85 mb-20 p-1'>Join Us</h1>
 
       <div className='w-[92%] flex flex-wrap justify-center'>

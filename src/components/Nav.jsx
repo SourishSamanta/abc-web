@@ -1,5 +1,6 @@
 import React from 'react'
 import icon from '../assets/icon.png'
+import { Link } from 'react-scroll';
 
 const Nav = () => {
   return (
@@ -8,9 +9,17 @@ const Nav = () => {
         <img src={icon}  alt="" />
         <div className=' flex items-center gap-3 mr-8'>
           {
-            ["Home","About","Contact"].map((item) => {
+            ["Home","About","Contact"].map((item,index) => {
               return(
-                <div className='p-2 '>{item}</div>
+                <Link
+                  key={index}
+                  to={item.toLowerCase()}
+                  smooth={true}
+                  duration={500}
+                  className='p-2 cursor-pointer'
+                >
+                  {item}
+                </Link>
               )
             })
           }
