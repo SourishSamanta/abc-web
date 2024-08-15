@@ -16,8 +16,8 @@ const Home = () => {
             const commitData = response.data.map((commit) => ({
                 sha: commit.sha,
                 author: commit.author,
-                date: commit.date,
-                message: commit.message
+                date: commit.date.split('T')[0], // Extract the date part (YYYY-MM-DD)
+                message: commit.message,
             }));
             setCommitHistory(commitData);
         } catch (error) {
@@ -25,37 +25,9 @@ const Home = () => {
         }
     };
 
-    // Aggregate commit data by date
-    const aggregateCommitsByDate = (commits) => {
-        const aggregatedData = {};
-
-        commits.forEach((commit) => {
-            const date = commit.date.split('T')[0]; // Extract the date part (YYYY-MM-DD)
-            if (aggregatedData[date]) {
-                aggregatedData[date] += 1; // Increment the commit count for this date
-            } else {
-                aggregatedData[date] = 1; // Initialize the commit count for this date
-            }
-        });
-
-        return Object.keys(aggregatedData).map((date) => ({
-            date,
-            commits: aggregatedData[date],
-        }));
-    };
-
-    // Aggregated commit data for the chart
-    const [commitData, setCommitData] = useState([]);
-
     useEffect(() => {
         fetchCommitHistory();  // Fetch the commit data when the component mounts
     }, []);
-
-    useEffect(() => {
-        const data = aggregateCommitsByDate(commitHistory);
-        console.log(data)
-        setCommitData(data);
-    }, [commitHistory]);
 
     return (
         <div className="flex-1 flex flex-col items-center">
@@ -86,13 +58,13 @@ const Home = () => {
                     <div className="neumorphism-card">
                         <h1 className="font-thin">GitHub Commits</h1>
                         <ResponsiveContainer width="100%" height="100%">
-                            <LineChart data={commitData}>
+                            <LineChart data={commitHistory}>
                                 <CartesianGrid strokeDasharray="3 3" />
                                 <XAxis dataKey="date" />
                                 <YAxis />
                                 <Tooltip />
                                 <Legend />
-                                <Line type="monotone" dataKey="commits" stroke="#8884d8" />
+                                <Line type="monotone" dataKey="sha" stroke="#8884d8" />
                             </LineChart>
                         </ResponsiveContainer>
                     </div>
