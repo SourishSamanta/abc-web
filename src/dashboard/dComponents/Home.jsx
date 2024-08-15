@@ -83,9 +83,9 @@ const Home = () => {
                     <div className="neumorphism-card">Card 3</div>
                 </div>
                 <div className="grid grid-cols-2 gap-4 h-[51vh]">
-                    <div className="neumorphism-card">
+                    <div className="neumorphism-card flex items-center justify-center flex-col">
                         <h1 className="font-thin">GitHub Commits</h1>
-                        <ResponsiveContainer width="100%" height="100%">
+                        <ResponsiveContainer width="100%" height="90%">
                             <LineChart data={commitData}>
                                 <CartesianGrid strokeDasharray="3 3" />
                                 <XAxis dataKey="date" />
