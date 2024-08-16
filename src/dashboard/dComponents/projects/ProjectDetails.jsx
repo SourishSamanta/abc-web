@@ -49,7 +49,7 @@ function ProjectDetails() {
                 alt={`${project.projectTitle} Banner`} 
                 className="w-full h-48 object-cover rounded-md mb-4" 
             />
-            <h2 className="text-3xl font-bold mb-2 text-black">{project.projectTitle}</h2>
+            <h2 className="text-3xl font-bold mb-2 text-black overflow-hidden">{project.projectTitle}</h2>
             <p className="text-lg text-gray-700 mb-4">{project.projectDescription}</p>
             <div className="text-gray-600 mb-4">
                 <strong>Links:</strong>

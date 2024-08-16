@@ -11,15 +11,15 @@ import {
 
 const InfoSecond = () => {
     return (
-        <div className=" w-full h-[100vh] flex flex-col items-center justify-center">
+        <div id="info2" className=" w-full h-[100vh] flex flex-col items-center justify-center">
             <h1 className=" text-3xl font-semibold opacity-85 mb-15 p-1">
                 What We Provide
             </h1>
 
-            <div className="w-10/12 h-[80%] flex flex-wrap justify-around ">
-                <div className=" w-[40%] h-full flex flex-col justify-center ">
+            <div className="wrapper w-10/12 h-[80%] flex  justify-around ">
+                <div className="sub-wrap w-[40%] h-full flex flex-col justify-center ">
                     {/* feature */}
-                    <div className=" w-full flex m-3">
+                    <div className="feature w-full flex m-3">
                         <MdCastForEducation size={150} className=" mr-5" />
                         <div className="flex flex-col">
                             <h3 className=" text-2xl mb-4">
@@ -67,7 +67,7 @@ const InfoSecond = () => {
                         </div>
                     </div>
                 </div>
-                <div className=" w-[40%] h-full flex flex-col justify-center">
+                <div className="sub-wrap w-[40%] h-full flex flex-col justify-center">
                     {/* feature */}
                     <div className=" w-full flex m-3">
                         <FaPencilAlt size={120} className=" mr-5" />

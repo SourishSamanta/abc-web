@@ -17,6 +17,7 @@
     "@mui/icons-material": "^5.16.6",
     "@mui/material": "^5.16.6",
     "@mui/styled-engine-sc": "^6.0.0-alpha.18",
+    "@mui/x-data-grid": "^7.12.1",
     "axios": "^1.7.3",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.21",

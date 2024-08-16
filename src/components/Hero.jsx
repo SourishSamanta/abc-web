@@ -13,7 +13,7 @@ const Hero = ({onGetStartedClick}) => {
         {/* <div className=" h-[90vh] w-full flex items-end justify-center overflow-hidden z-10"> */}
         <div id="home" className="h-[100vh] w-full flex items-center overflow-hidden z-10 bg-black">
 
-            <div className=" pl-[10vw] w-[70vw] flex flex-col mr-[5vw]">
+            <div className=" title pl-[10vw] w-[70vw]  flex flex-col mr-[5vw]">
                 <h1 className=" main-heading text-[5vw] font-bold  overflow-hidden">Algorand</h1>
                 <h1 className=" main-heading text-[5vw] font-bold -mt-10 overflow-hidden">Blockchain</h1>
                 <h1 className=" main-heading text-[5vw] font-bold -mt-10 overflow-hidden">Club.</h1>

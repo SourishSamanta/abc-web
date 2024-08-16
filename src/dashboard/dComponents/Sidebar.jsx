@@ -77,17 +77,7 @@ const Sidebar = ({ collapsed, setCollapsed, onClick, selected }) => {
                     )}
                 </button>
 
-                <button
-                    onClick={() => onClick("community")}
-                    className={getButtonClasses("community")}
-                >
-                    <FaHome size={27} />
-                    {!collapsed && (
-                        <span className="ml-2  transition duration-200 font-semibold">
-                            Community
-                        </span>
-                    )}
-                </button>
+                
 
                 <button
                     onClick={() => onClick("announcement")}

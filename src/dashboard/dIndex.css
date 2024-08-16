@@ -20,6 +20,7 @@ body {
   color: black; /* Light mode text color */
   width: 20vw;
   height: 12vw;
+  
 }
 
 .dark .project-card{
@@ -32,4 +33,25 @@ body {
   background: #2c2c2c; /* Dark mode background */
   box-shadow: 10px 10px 30px #1a1a1a, -10px -10px 30px #363636;
   color: white; /* Dark mode text color */
+}
+
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  height: 12px; /* Height of the scrollbar (for horizontal bars) */
+}
+
+::-webkit-scrollbar-track {
+  background: #222222; /* Background of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0f0f0f; /* Scrollbar color */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  border-top: 1px solid #f1f1f1; /* Adds space around the thumb for a "floating" effect */
+  border-bottom: 1px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #333333; /* Darker color when hovering over the scrollbar */
 }

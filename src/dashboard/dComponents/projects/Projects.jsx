@@ -58,8 +58,8 @@ const Projects = () => {
                                                 alt={`${project.projectTitle} Banner`} 
                                                 className="w-full h-32 object-cover rounded-md mb-4" 
                                             />
-                                            <h2 className="text-xl font-bold mb-2">{project.projectTitle}</h2>
-                                            <p className="text-gray-600">{project.projectDescription}</p>
+                                            <h2 className="text-xl font-bold mb-2 overflow-hidden">{project.projectTitle}</h2>
+                                            <p className="text-gray-600 overflow-hidden">{project.projectDescription}</p>
                                         </div>
                                     ))}
                                 </>

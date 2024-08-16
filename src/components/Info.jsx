@@ -4,16 +4,13 @@ import video2 from '../assets/video2.mp4'
 
 const Info = () => {
   return (
-    <section className=' z-10 w-full h-[100vh] flex items-center justify-center'>
+    <section id='info' className=' z-10 w-full h-[100vh] flex items-center justify-center'>
 
-      <div className='flex w-10/12 justify-around'>
-        <div className=' h-[35vw] w-[35vw] rounded-[3rem]  overflow-hidden'>
+      <div className=' wrapper flex w-10/12 items-center justify-around'>
+        <div className='img h-[40%] w-[40%] rounded-[3rem]  overflow-hidden'>
           <img src={img} alt="why Blockchain ?" className=' w-full' />
-          {/* <video autoPlay muted loop className=' w-full h-full object-cover '>
-            <source src={video2} />
-          </video> */}
         </div>
-        <div className=' flex flex-col items-center w-[35vw] '>
+        <div className=' text flex flex-col items-center w-[40%] '>
           <div className='  flex flex-col items-center w-full justify-between '>
             <h1 className=' uppercase text-[2.2vw] font-bold p-0'>Why Blockchain is</h1>
             <h1 className=' uppercase text-[2.2vw] font-bold p-0'>Important ?</h1>

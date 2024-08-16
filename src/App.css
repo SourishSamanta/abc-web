@@ -97,3 +97,85 @@ p{
         margin-left: 40px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    #home{
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .mainButton{
+        width: 90%;
+    }
+    .title{
+        width: 90%;
+        align-items: start;
+    }
+    .title h1{
+        font-size: 10vw;
+        margin: -10px;
+    }
+    .title button{
+        width: 100%;
+        font-size: 5vw;
+        padding: 3vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #video{
+        height: 40vh;
+    }
+    
+    #video img{
+        width: 100vw;
+        height: auto;
+    }
+
+    #video h1{
+        font-size: 0.8rem;
+    }
+
+    #info .wrapper{
+        flex-direction: column;
+        width: 90%;
+    }
+    #info .img{
+        width: 85%;
+    }
+    #info .text{
+        width: 85%;
+        margin-top: 10vw;
+    }
+    .text h1{
+        font-size: 6vw;
+        
+    }
+    .text p{
+        font-size: 4vw;
+    }
+    #info{
+        height: auto;
+    }
+    #info2 .wrapper{
+        flex-direction: column;
+    }
+    #info2 .sub-wrap{
+        flex-direction: column;
+        width: 95%;
+    }
+
+    #info2 .sub-wrap h3{
+        font-size: 4vw;
+    }
+
+    #info2 p{
+        opacity: 1;
+        font-weight: 300;
+    }
+
+    #info2 .feature{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+}

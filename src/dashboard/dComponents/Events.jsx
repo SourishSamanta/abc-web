@@ -38,7 +38,7 @@ const Events = () => {
     if (error) return <div className="text-center mt-10 text-red-500">{error}</div>;
 
     return (
-        <div className="flex-1 flex flex-col overflow-hidden items-center min-h-[100vh] bg-gray-900 text-gray-300">
+        <div className="flex-1 flex flex-col overflow-hidden items-center min-h-[100vh]  text-gray-300">
             <div className="flex w-[90%] flex-col mt-4">
                 <h1 className="text-2xl mb-4 text-white">Events</h1>
                 <div className="flex-wrap flex flex-1 gap-4 mb-4">
